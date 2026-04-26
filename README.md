@@ -44,32 +44,128 @@ CIRCUIT DIAGRAM:
 
 
 a.   KVL:
- 
+
+ <img width="1511" height="828" alt="Screenshot 2026-04-25 115844" src="https://github.com/user-attachments/assets/1ff7f93c-3ac2-4a15-afcb-4cab24a4a15a" />
+
 
 
 b.  KCL:
  
+ <img width="1044" height="544" alt="image" src="https://github.com/user-attachments/assets/b631e1af-fcfd-42c3-8387-5839e3334625" />
+
 
 Calculation:
 
 a.   KVL:
  
+## Circuit Calculation
+
+$$
+V = V_{30\Omega} + V_{50\Omega} + V_{100\Omega}
+$$
+
+$$
+100 = IR_1 + IR_2 + IR_3
+$$
+
+$$
+R_{eq} = R_1 + R_2 + R_3 = 180\Omega
+$$
+
+$$
+I = \frac{V}{R_{eq}} = \frac{100}{180} = 0.556A
+$$
+
+$$
+V_1 = IR_1 = 0.556 \times 30 = 16.68V
+$$
+
+$$
+V_2 = IR_2 = 0.556 \times 50 = 27.8V
+$$
+
+$$
+V_3 = IR_3 = 0.556 \times 100 = 55.6V
+$$
+
 
 
 b.  KCL:
 
+### b. KCL
 
+$$
+i_{30\Omega} = i_{50\Omega} + i_{100\Omega}
+$$
 
+$$
+i_{30\Omega} = \frac{100 - V}{30}
+$$
+
+$$
+i_{50\Omega} = \frac{V}{50}
+$$
+
+$$
+i_{100\Omega} = \frac{V}{100}
+$$
+
+$$
+\frac{100 - V}{30} = \frac{V}{50} + \frac{V}{100}
+$$
+
+$$
+\frac{100 - V}{30} = \frac{2V}{100} + \frac{V}{100}
+$$
+
+$$
+\frac{100 - V}{30} = \frac{3V}{100}
+$$
+
+$$
+1000 - 10V = 9V
+$$
+
+$$
+19V = 1000
+$$
+
+$$
+V = \frac{1000}{19} = 52.63V
+$$
+
+$$
+i_{30\Omega} = \frac{100 - 52.63}{30} = 1.58A
+$$
+
+$$
+i_{50\Omega} = \frac{52.63}{50} = 1.05A
+$$
+
+$$
+i_{100\Omega} = \frac{52.63}{100} = 0.53A
+$$
 
 Tabulation:
 
 a.   KVL:
- 
+
+ ### a. KVL
+
+| KVL        | Source(V) | V30Ω  | V50Ω | V100Ω | V30Ω + V50Ω + V100Ω |
+|------------|----------|-------|------|-------|----------------------|
+| Theoretical| 100      | 16.68V| 27.8V| 55.6V | 100.05V             |
+| Practical  | 100      | 16.7V | 27.8V| 55.6V | 100.1V              |
 
 
 b.  KCL:
 
+### b. KCL
 
+| KCL        | I30Ω | I50Ω | I100Ω | VA     |
+|------------|------|------|-------|--------|
+| Theoretical| 1.58A| 1.05A| 0.53A | 52.63V |
+| Practical  | 1.58A| 1.05A| 0.53A | 52.6V  |
 
 RESULT:
 
